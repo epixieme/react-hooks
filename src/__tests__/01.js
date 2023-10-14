@@ -6,6 +6,6 @@ import App from '../final/01'
 
 test('typing a name shows a greeting', async () => {
   render(<App />)
-  await userEvent.type(screen.getByRole('textbox', {name: /name/i}), 'bob')
-  expect(screen.getByText(/hello.*bob/i)).toBeInTheDocument()
+  await userEvent.type(screen.getByRole('textbox', {name: /name/i}), 'Simon')
+  expect(screen.getByText(/hello.*simon/i)).toBeInTheDocument()
 })
