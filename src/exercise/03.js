@@ -29,19 +29,20 @@ function FavoriteAnimal({animal, onAnimalChange}) {
 }
 
 // 🐨 uncomment this
-// function Display({name, animal}) {
-//   return <div>{`Hey ${name}, your favorite animal is: ${animal}!`}</div>
-// }
+function Display({name, animal}) {
+  return <div>{`Hey ${name}, your favorite animal is: ${animal}!`}</div>
+}
 
 // 💣 remove this component in favor of the new one
-function Display({name}) {
-  return <div>{`Hey ${name}, you are great!`}</div>
-}
+// function Display({name}) {
+//   return <div>{`Hey ${name}, you are great!`}</div>
+// }
 
 function App() {
   // 🐨 add a useState for the animal
   const [animal, setAnimal] = React.useState('')
   const [name, setName] = React.useState('')
+
   return (
     <form>
       <Name name={name} onNameChange={event => setName(event.target.value)} />
